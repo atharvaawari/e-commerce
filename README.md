@@ -25,13 +25,13 @@ A full-stack Ecommerce application built with MongoDB, Express, React, and Node.
 ## Tech Stack
 
 - **Frontend**: React (Vite), Ant Design, TanStack Query, TailwindCSS.
-- **Backend**: Node.js, Express.js, MongoDB (Mongoose), Nodemailer, Cloudinary.
+- **Backend**: Node.js, Express.js, MongoDB (Mongoose), Nodemailer.
 
 ## Setup Instructions
 
 ### Prerequisites
 - Node.js (v14+)
-- MongoDB (Local or Atlas)
+- MongoDB (Atlas)
 
 ### 1. Backend Setup
 
@@ -49,7 +49,6 @@ A full-stack Ecommerce application built with MongoDB, Express, React, and Node.
    ```
    - Update `MONGODB_URI` with your connection string.
    - Update `EMAIL_USER` and `EMAIL_PASS` for enquiry emails.
-   - Set `CLOUDINARY` credentials if handling image uploads.
 4. Start the server:
    ```bash
    npm run dev
@@ -86,16 +85,7 @@ A full-stack Ecommerce application built with MongoDB, Express, React, and Node.
 
 ## Project Structure
 
-- `Backend/src`: Models, Controllers, Routes, Utils.
+- `Backend/src`: Models, Controllers, Routes.
 - `Frontend/src`: Pages, Components, Context, API hooks.
 
-## Contributing
 
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
-
-## License
-MIT
