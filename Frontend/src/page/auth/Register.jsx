@@ -3,9 +3,11 @@ import { Button, Checkbox, Form, Input, Divider } from 'antd';
 import { LoadingOutlined, LoginOutlined } from '@ant-design/icons';
 import { useMutation } from "@tanstack/react-query";
 import { registerMutationFn } from '../../lib/api';
+import { useAuthContext } from '../../context/AuthContext';
 
 const Register = () => {
   const navigate = useNavigate();
+  const { login } = useAuthContext();
   const [form] = Form.useForm();
 
   const { mutate, isPending } = useMutation({
@@ -18,6 +20,7 @@ const Register = () => {
     mutate(values, {
       onSuccess: (data) => {
         console.log('Register successful:', data);
+        login(data.accessToken, data.user);
         navigate(`/home`);
       },
       onError: (error) => {

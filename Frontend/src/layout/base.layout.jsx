@@ -8,13 +8,13 @@ const BaseLayout = () => {
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-gray-50">
-      {user ? <Header /> : null}
+      {user && user.role !== 'admin' ? <Header /> : null}
       <div className="flex-1 flex items-center justify-center w-full">
         <div className="w-full flex items-center justify-center">
           <Outlet />
         </div>
       </div>
-      {user ? <Chatbot /> : null}
+      {user && user.role !== 'admin' ? <Chatbot /> : null}
     </div>
   );
 };
