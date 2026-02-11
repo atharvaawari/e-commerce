@@ -1,7 +1,6 @@
-import React from 'react';
 import { useNavigate } from 'react-router';
 import { Button, Checkbox, Form, Input, Divider } from 'antd';
-import { GoogleOutlined, LoadingOutlined, LoginOutlined } from '@ant-design/icons';
+import { LoadingOutlined, LoginOutlined } from '@ant-design/icons';
 import { useMutation } from "@tanstack/react-query";
 import { registerMutationFn } from '../../lib/api';
 
@@ -19,7 +18,6 @@ const Register = () => {
     mutate(values, {
       onSuccess: (data) => {
         console.log('Register successful:', data);
-        // navigate(`/dashboard/${data.user._id}`)
         navigate(`/home`);
       },
       onError: (error) => {
@@ -27,11 +25,6 @@ const Register = () => {
       }
     })
 
-  };
-
-
-  const handleGoogleLogin = () => {
-    console.log('Redirecting to Google OAuth...');
   };
 
   return (

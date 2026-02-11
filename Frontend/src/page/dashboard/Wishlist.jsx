@@ -73,7 +73,7 @@ const Wishlist = () => {
                                 title={
                                     <div className="flex justify-between items-center">
                                         <span className="truncate max-w-[150px]" title={product.title}>{product.title}</span>
-                                        <Tag color="green">${product.price}</Tag>
+                                        <Tag color="green">₹{product.price}</Tag>
                                     </div>
                                 }
                                 description={

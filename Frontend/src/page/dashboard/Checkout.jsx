@@ -65,7 +65,7 @@ const Checkout = () => {
 
                             <Form.Item>
                                 <Button type="primary" htmlType="submit" size="large" block>
-                                    Place Order (${total.toFixed(2)})
+                                    Place Order (₹{total.toFixed(2)})
                                 </Button>
                             </Form.Item>
                         </Form>
@@ -82,13 +82,13 @@ const Checkout = () => {
                                         Qty: {item.quantity} {item.color ? `| ${item.color}` : ''}
                                     </div>
                                 </div>
-                                <Text>${(item.price * item.quantity).toFixed(2)}</Text>
+                                <Text>₹{(item.price * item.quantity).toFixed(2)}</Text>
                             </div>
                         ))}
                         <Divider />
                         <div className="flex justify-between">
                             <Title level={4}>Total</Title>
-                            <Title level={4}>${total.toFixed(2)}</Title>
+                            <Title level={4}>₹{total.toFixed(2)}</Title>
                         </div>
                     </Card>
                 </Col>

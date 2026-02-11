@@ -107,7 +107,7 @@ const AdminDashboard = () => {
             title: "Price",
             dataIndex: "price",
             key: "price",
-            render: (price) => `$${price}`,
+            render: (price) => `₹${price}`,
         },
         {
             title: "Actions",

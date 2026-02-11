@@ -63,3 +63,45 @@ export const sendEnquiryMutationFn = async (data) => {
   const response = await API.post("/enquiry", data);
   return response.data;
 };
+
+// Cart APIs
+export const getCartQueryFn = async () => {
+  const response = await API.get("/cart");
+  return response.data;
+};
+
+export const addToCartMutationFn = async (data) => {
+  const response = await API.post("/cart/add", data);
+  return response.data;
+};
+
+export const removeFromCartMutationFn = async (data) => {
+  const response = await API.post("/cart/remove", data);
+  return response.data;
+};
+
+export const updateCartQuantityMutationFn = async (data) => {
+  const response = await API.post("/cart/update", data);
+  return response.data;
+};
+
+export const clearCartMutationFn = async () => {
+  const response = await API.post("/cart/clear");
+  return response.data;
+};
+
+// Wishlist APIs
+export const getWishlistQueryFn = async () => {
+    const response = await API.get("/wishlist");
+    return response.data;
+};
+
+export const addToWishlistMutationFn = async (data) => {
+    const response = await API.post("/wishlist/add", data);
+    return response.data;
+};
+
+export const removeFromWishlistMutationFn = async (id) => {
+    const response = await API.delete(`/wishlist/remove/${id}`);
+    return response.data;
+};

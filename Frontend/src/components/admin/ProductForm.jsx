@@ -53,7 +53,7 @@ const ProductForm = ({ initialValues, onFinish, loading }) => {
                     rules={[{ required: true, message: "Please enter price" }]}
                 >
                     <InputNumber
-                        prefix="$"
+                        prefix="₹"
                         style={{ width: '100%' }}
                         min={0}
                         placeholder="0.00"

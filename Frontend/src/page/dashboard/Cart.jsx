@@ -62,7 +62,7 @@ const Cart = () => {
                             title={<Text strong>{item.title}</Text>}
                             description={
                                 <Space direction="vertical" size={0}>
-                                    <Text type="secondary">${item.price}</Text>
+                                    <Text type="secondary">₹{item.price}</Text>
                                     <Text type="secondary" className="text-xs">
                                         {item.color && `Color: ${item.color}`} {item.size && ` | Size: ${item.size}`}
                                     </Text>
@@ -84,7 +84,7 @@ const Cart = () => {
                 </Space>
 
                 <div className="text-right">
-                    <Title level={4}>Total: ${total.toFixed(2)}</Title>
+                    <Title level={4}>Total: ₹{total.toFixed(2)}</Title>
                     <Button type="primary" size="large" onClick={() => navigate("/checkout")}>
                         Proceed to Checkout
                     </Button>

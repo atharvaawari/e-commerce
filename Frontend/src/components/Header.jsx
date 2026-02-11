@@ -1,8 +1,7 @@
-import React from "react";
-import { ShoppingCartOutlined, HeartOutlined, UserOutlined, LogoutOutlined } from "@ant-design/icons";
+import { ShoppingCartOutlined, HeartOutlined, UserOutlined, LogoutOutlined, MailOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router";
 import { useMutation } from "@tanstack/react-query";
-import { Layout, Button, Badge, Avatar, Dropdown, Space } from "antd";
+import { Button, Badge, Avatar, Dropdown, Space } from "antd";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { useAuthContext } from "../context/AuthContext";
@@ -19,7 +18,7 @@ const Header = () => {
         mutationFn: logoutMutationFn,
         onSuccess: () => {
             logout();
-            navigate("/login");
+            navigate("/login", { replace: true });
         },
     });
 
@@ -65,6 +64,13 @@ const Header = () => {
                         className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-50"
                     />
                 </Badge>
+
+                <Button
+                    type="text"
+                    icon={<MailOutlined className="text-xl text-gray-600 hover:text-blue-500 transition-colors" />}
+                    onClick={() => navigate("/contact")}
+                    className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-50"
+                />
 
                 {user ? (
                     <Dropdown menu={{ items: profileMenuInems }} placement="bottomRight" arrow>

@@ -1,5 +1,5 @@
 import { Button, Checkbox, Form, Input, Divider, Typography } from 'antd';
-import { GoogleOutlined, LoadingOutlined, LockOutlined, LoginOutlined, MailOutlined } from '@ant-design/icons';
+import { LoadingOutlined, LockOutlined, LoginOutlined, MailOutlined } from '@ant-design/icons';
 import { Link, useNavigate } from 'react-router';
 import { useMutation } from '@tanstack/react-query';
 import { loginMutationFn } from '../../lib/api';
@@ -37,10 +37,6 @@ const Login = () => {
 
     });
     console.log('Login attempt with:', values);
-  };
-
-  const handleGoogleLogin = () => {
-    console.log('Initiating Google Login...');
   };
 
   return (

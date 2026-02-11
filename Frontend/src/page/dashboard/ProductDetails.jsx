@@ -66,7 +66,7 @@ const ProductDetails = () => {
                     <Typography>
                         <Tag color="blue" className="mb-2">{product.category}</Tag>
                         <Title level={2}>{product.title}</Title>
-                        <Title level={3} type="success">${product.price}</Title>
+                        <Title level={3} type="success">₹{product.price}</Title>
 
                         <Paragraph className="text-base text-gray-600">
                             {product.description}
