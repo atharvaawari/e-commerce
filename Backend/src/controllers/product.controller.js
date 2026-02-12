@@ -66,7 +66,10 @@ const syncProducts = async (req, res) => {
         throw new Error(`Failed to fetch products: ${response.status} ${response.statusText} - ${text.substring(0, 100)}`);
     }
 
-    const products = await response.json();
+    const data = await response.json();
+
+    // DummyJSON wraps products in "products"
+    const products = data.products;
 
     const syncedProducts = [];
 
