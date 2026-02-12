@@ -59,11 +59,7 @@ const deleteProduct = async (req, res) => {
 
 const syncProducts = async (req, res) => {
   try {
-    const response = await fetch('https://fakestoreapi.com/products', {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-      }
-    });
+    const response = await fetch('https://dummyjson.com/products');
 
     if (!response.ok) {
         const text = await response.text();
